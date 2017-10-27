@@ -1,0 +1,44 @@
+\section{Analysis of Results}
+\label{Results}
+\subsection{Results}
+According to the converging path of the elemental and nodal stresses for decreasing mesh sizes, the results of the FEM simulation of the final stator have been validated. Local mesh refinements have been applied to the high stress regions to converge even more. Table \ref{tab:final_stresses} shows the maximum stresses for the stator during both the operational and shutdown condition. In this table, the top part of the stator is above the blade while the bottom part is beneath the blade.
+\begin{table}[H]
+\centering
+\caption{Final max principal stress values in the critical areas.}
+\label{tab:final_stresses}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Condition} & \textbf{Highest stress} [MPa] & \textbf{Convergence [\%]} & \textbf{Location} \\ \hline
+Operational        & 810             & 1.1			& Bottom             \\ \hline
+Shut-down          & 1505            & 2.5			& Top                \\ \hline
+\end{tabular}
+\end{table}
+\subsection{Validation of the results}
+The results for the stator during the shut-down condition show that the stress in the top part exceeds the yield stress, so in reality, the stator will fail in the top part of the stator. The stresses in point (A), (B), and (C) of Figure \ref{fig:final_stator} are all related to the design of the wave and considered when determining the length, height and angle of the wave. The stresses in these points are more or less the same and equal to a value around 1500 [MPa], the high stresses can be seen in Figure \ref{fig:highstressshutdownl}, \ref{fig:highstressshutdown2} and \ref{fig:highstressshutdown3}. The high stresses in shutdown condition exceed the yield stress of the material; therefore in reality, the stator will fail in these points.\\
+In operating conditions, the highest stress is equal to 810 [MPa] in the large edge blend below the blade and can be seen in Figure \ref{fig:highstressoperational1}. The convergence percentage that is used to validate the stator is 10$\%$, as can be seen in Appendix \ref{AppendixD}. As can be seen in Table \ref{tab:final_stresses}, the convergence percentage is reached for both conditions. 
+
+Other high stresses occur at the rectangular edge (point (E) in Figure \ref{fig:final_stator}) and the blade edge. The stress on the rectangular edge, which can be seen in Figure \ref{fig:highstressoperational3}, is due to a singularity on this edge and the stress in this singularity can be neglected. Once an edge blend is added to this edge the stress around this edge blend easily becomes lower than the 810 [MPa] in the other high stress point. However, the edge blend will not be applied to the re-design otherwise the compatibility becomes questionable due to a smaller contact surface. The high stress in the blade, which can be seen in Figure \ref{fig:highstressoperational2}, lies within the 1.5 [mm] area of the negligible stresses due to the singularities. However, the stress above the 1.5 [mm] is just a little lower than the highest stress in the edge blend.
+
+\subsection{Deformation}
+In the two different circumstances in which the stator operates, a deformation in the material is present. The original stator deforms with a maximum of 0.5 [mm] during the operational conditions. The amount of deformation of the new design is not very different from the original stator design. The main goal of the design is to avoid cracking of the stator, which is caused by the high stress points and not by the deformation amount. Added to that, the correlation between deformation and functionality of the stator remains unknown, but since the deformation is similar to the original, there should be no functionality problem. Therefore, the only major influence on the functionality of the stator is  the amount of stress in the stator compared to the yield stress of the stator.
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
