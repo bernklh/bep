@@ -33,7 +33,7 @@ The model is used in this bachelor final thesis to question the viability of usi
 
 \subsection{Setting up the model}
 \textit{Geometry}\newline
-The model is created in 'Comsol Multiphysics 5.2' using the 'Heat Transfer in Solids' module. First, the Melasta SLPB9564159 selected in section \ref{Selecting_A_Battery} is geometrically modeled. The geometry is consisting out of the main battery body and two connection tabs. The aluminum pouch is not geometrically modeled, this is implemented later.
+The model is created in 'Comsol Multiphysics 5.2' using the 'Heat Transfer in Solids' module. First, the Melasta SLPB9564159 selected in section \ref{Chap:Battery_Selection} is geometrically modeled. The geometry is consisting out of the main battery body and two connection tabs. The aluminum pouch is not geometrically modeled, this is implemented later.
 
 \textit{Material}\newline
 Next, a material is assigned to each component. The anode and cathode current collector tabs got assigned aluminum and copper respectively. The material properties in Comsol provide all the required constants for the equations used for the tabs. 
@@ -127,7 +127,7 @@ Then for the cell domain formula \ref{Eq:cell_not_used} should be used.
 \label{Eq:cell_not_used}
 P=RI^2+(T[\frac{dE}{dT}])I
 \end{equation}
-However, the most right hand term, the internal entropy change, has to be measured and has minor impact compared to the first right hand term. This entropy change is thus neglected, leaving us with the same formula as for the tab domain, formula \ref{Eq:tab}. We do not need to calculate $R$ by the resistivity formula since $R$ is given by the Melasta Datasheet ($R = 2\cdot 10^-3$) [$\ohm$]. \\
+However, the most right hand term, the internal entropy change, has to be measured and has minor impact compared to the first right hand term. This entropy change is thus neglected, leaving us with the same formula as for the tab domain, formula \ref{Eq:tab}. We do not need to calculate $R$ by the resistivity formula since $R$ is given by the Melasta Datasheet ($R = 1.5\cdot 10^-3$) [$\ohm$]. \\
 $I$ is chosen to be 180 [A] since this was drawn by the EDF motor in the previous bachelor thesis, as seen in figure \ref{Fig:Typical_Current}.
 \begin{figure} [H]
 	\centering
@@ -274,7 +274,7 @@ Which gives the final temperature field equation \ref{Eq:final_temperature_field
 T(x) = \frac{\dot{q}L^2}{2k}(1-\frac{x^2}{L^2})+\frac{\dot{q}L}{h}+T_{ambient}
 \end{equation}
 
-The temperature field is calculated in matlab making sure the same parameters are used as in Comsol. For $h = 10$, $k = 0.3$, $\dot{q} = 180^2 \exp^-3$ and $L = 0.0095/2$ (parameters used for the battery out-of-plane) the results gotten are plotted in figure \ref{Fig:Comparison}. It is seen that the results match almost perfectly. It is concluded Comsol calculates the conductive and convective conditions accurately.
+The temperature field is calculated in matlab making sure the same parameters are used as in Comsol. For $h = 10$, $k = 0.3$, $\dot{q} = 180^2\cdot 1.5 \exp^-3$ and $L = 0.0095/2$ (parameters used for the battery out-of-plane) the results gotten are plotted in figure \ref{Fig:Comparison}. It is seen that the results match almost perfectly. It is concluded Comsol calculates the conductive and convective conditions accurately.
 
 \begin{figure}[H]
   \centering
